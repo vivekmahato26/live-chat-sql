@@ -8,6 +8,7 @@ msgRouter.post("/send", async(req,res) => {
         const data = await sendMessage(req)
         res.send(data)
     } catch (error) {
+        console.log(error);
         res.send({err:error.message})
     }
 })
